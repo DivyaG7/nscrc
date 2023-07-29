@@ -1,0 +1,266 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns with equal width */
+    grid-template-rows: 1fr;
+    /* One row with equal height */
+    gap: 10px;
+    /* Adjust the gap between the columns if needed */
+    height: 1250px;
+    /* Set the height of the grid container */
+    min-height: 0;
+    margin-bottom: 70px;
+}
+
+.full-height {
+    background-color: #f0f0f0;
+    /* For visualization purposes */
+    grid-row: 1 / span 2;
+    /* This spans the full height of the grid */
+    background-color:rgb(236, 250, 255);
+    margin-top: 20px;
+    height: 790px;
+}
+
+.two-rows {
+    display: grid;
+    margin-top: 20px;
+    grid-template-rows: 1fr 1fr;
+    /* Two rows with equal height */
+    gap: 10px;
+    /* Adjust the gap between the rows if needed */
+}
+
+.row-item {
+  background-color: rgb(236, 250, 255);
+    /* For visualization purposes */
+}
+
+.full-height .corporate1{
+  margin-top: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2{
+    margin-top: 30px;
+  }
+
+  .member-fee{
+    text-align: center;
+  }
+
+
+  .grid-container {
+    flex: 1; /* Allow the container to take the available space between header and footer */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px; /* Add some padding to the container if needed */
+  }
+  
+.corporate{
+  text-align: center;
+}
+
+.corporate2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.first-row{
+  background-color: rgb(236, 250, 255);
+}
+
+.img-1{
+  width: 80vh;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.img-2{
+  width: 80vh;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.two-rows :nth-child(2){
+  height: fit-content;
+}
+
+
+.container-1{
+  padding: 80px;
+  margin-top: -500px;
+  height: 700px;
+}
+
+.container-1 .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+h4{
+  text-align: center;
+} 
+
+.container-1.title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg,white);
+}
+
+.container-1 .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin: 20px 0 12px 0;
+} 
+
+.user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+
+.button{
+  height: 45px;
+  margin: 45px 0;
+}
+
+.button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color:black;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg,white);
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.button input:hover{
+  background: linear-gradient(-135deg,white);
+}
+
+.container-1 .download{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+@media (max-width: 584px){
+  .container-1{
+      max-width: 100%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+  }
+  .container-1 form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+      width: 0;
+  }
+} 
+
+
+/* Mobile view CSS */
+
+/* Adjust the grid layout for smaller screens */
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    grid-template-rows: auto auto; /* Allow rows to adjust their height based on content */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  /* Full-height section spanning both rows on mobile */
+  .full-height {
+    grid-row: auto; /* Reset the grid-row property to default */
+    height: auto; /* Let the height adjust based on content */
+    margin-top: 20px; /* Adjust the top margin for better spacing */
+    padding-bottom: 20px; /* Add some padding at the bottom for spacing */
+  }
+
+  /* Two rows layout */
+  .two-rows {
+    display: block; /* Change to a block layout to stack the rows */
+  }
+
+  .row-item {
+    margin-bottom: 20px; /* Add some spacing between rows */
+  }
+
+  .img-1,
+  .img-2 {
+    width: 70%; /* Make the images responsive and fit the screen width */
+    margin: 20px 65px; /* Center the images and adjust the margin for spacing */
+  }
+
+  .corporate1,
+  .corporate2 {
+    margin-top: 20px; /* Adjust the top margin for better spacing */
+  }
+
+  /* Form styles */
+  .container-1 {
+    padding: 40px; /* Reduce padding for better mobile layout */
+    margin-top: -100px; /* Adjust the margin to avoid overlap with content */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .user-details .input-box {
+    width: 100%; /* Set the form fields to occupy the full width */
+  }
+
+  .container-1 .user-details {
+    max-height: none; /* Remove max-height for form scrollability */
+    overflow-y: auto; /* Add scrollbar for form content that exceeds the screen height */
+  }
+}
+
+/* Additional mobile styles can be added here as needed */

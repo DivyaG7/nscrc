@@ -1,0 +1,32 @@
+.broucher{
+    height: 50vh;
+}
+
+.broucher .file-download{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+/* Style for the button */
+.file-download button {
+    background-color: #bebebe; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+/* Optional hover effect */
+.file-download button:hover {
+    background-color: #9dacca; 
+}
+
+/* Optional focus effect */
+.file-download button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(100, 106, 112, 0.5); 
+}

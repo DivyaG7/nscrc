@@ -1,0 +1,29 @@
+/* styles.css */
+
+/* Assuming each blog card is an image, set the width and height for the slider */
+.blog-slider {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+/* Set the width of each slide and allow them to float next to each other */
+.blog-card {
+  width: 100%;
+  float: left;
+}
+
+/* For horizontal scrolling effect, animate the transform property */
+.blog-card.style1 {
+  animation: scroll 20s linear infinite; /* Adjust the duration as needed */
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Assuming each slide takes the full width of the container */
+  }
+}
